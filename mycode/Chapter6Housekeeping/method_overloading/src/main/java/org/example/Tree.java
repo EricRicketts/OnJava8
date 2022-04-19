@@ -13,4 +13,10 @@ public class Tree {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public String info() { return "The tree is " + this.getHeight() + " feet tall."; }
+
+    public String info(String message) {
+        return message + this.info();
+    }
 }
