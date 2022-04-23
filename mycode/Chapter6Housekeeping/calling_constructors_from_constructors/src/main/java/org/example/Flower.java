@@ -30,5 +30,10 @@ public class Flower {
     }
 }
 /*
-    Some important things to note about "this"
+    Some important things to note about "this", normally "this" refers to the current object as it
+    does in the two argument constructor beginning in line 21.  However, we see on line 22 "this" can
+    refer to something else when used inside the body of a constructor.  "this" can refer to another
+    constructor.  In the case of line 22 it refers to the single argument constructor with an int parameter.
+    When used in such a manner, "this" can only be used to call one constructor and it must be the first statement
+    in the constructor.
 */
