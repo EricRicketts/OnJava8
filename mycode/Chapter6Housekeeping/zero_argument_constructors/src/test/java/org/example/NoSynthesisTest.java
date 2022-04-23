@@ -25,6 +25,6 @@ class NoSynthesisTest {
     }
 }
 /*
-    If the developer specifies a constructor, any constructor then Java will not provide a default constructor.
+    If the developer specifies a constructor, any constructor, then Java will not provide a default constructor.
     The specified constructor is NOT constrained, it does not have to be a no argument constructor.
 */
