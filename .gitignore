@@ -110,3 +110,6 @@ buildSrc/
 /threads/primes.txt
 _*
 config.py
+
+.idea/
+target/
