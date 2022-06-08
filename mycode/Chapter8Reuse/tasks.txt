@@ -1,0 +1,3 @@
+for Chapter 8, the following projects need code and tests:
+1.  combining_composition_and_inheritance
+2.  name_hiding
