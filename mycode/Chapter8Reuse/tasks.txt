@@ -1,3 +1,7 @@
 for Chapter 8, the following projects need code and tests:
 1.  combining_composition_and_inheritance
 2.  name_hiding
+3.  composition vs inheritance
+4.  protected
+5.  upcasting
+
