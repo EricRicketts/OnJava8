@@ -1,6 +1,7 @@
 package model;
 
 public class DataOnly {
+  private static int staticI = 5;
   private int i;
   private double d;
   private boolean b;
@@ -9,6 +10,10 @@ public class DataOnly {
     this.i = 10;
     this.d = 10.00;
     this.b = false;
+  }
+
+  public static int getStaticI() {
+    return staticI;
   }
 
   public int getI() {
@@ -21,6 +26,10 @@ public class DataOnly {
 
   public boolean getB() {
     return b;
+  }
+
+  public static void setStaticI(int staticI) {
+    DataOnly.staticI = staticI;
   }
 
   public void setI(int i) {

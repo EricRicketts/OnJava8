@@ -36,4 +36,15 @@ public class AppTest {
     dOnly.addToD(5.00);
     assertEquals(15.00, dOnly.getD());
   }
+
+  @Test
+  @DisplayName("static methods do not need an instance")
+  public void testStaticMethodsDoNotNeedAnInstance() {
+    int[] expected = {5, 15};
+    int[] results = {DataOnly.getStaticI(), 0};
+    DataOnly.setStaticI(15);
+    results[1] = DataOnly.getStaticI();
+
+    assertArrayEquals(expected, results);
+  }
 }
