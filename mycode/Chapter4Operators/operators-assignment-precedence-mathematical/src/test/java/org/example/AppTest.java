@@ -80,4 +80,19 @@ public class AppTest {
 
     assertArrayEquals(expected, results);
   }
+
+  @Test
+  @DisplayName("pre-increment and post-increment operators")
+  public void testPreIncrementAndPostIncrementOperators() {
+    int a = 0;
+    int[] expected = {0, 1, 1, 2};
+    int[] results = {a, 0, 0, 0};
+    int b = ++a;
+    results[1] = b;
+    int c = a++;
+    results[2] = c;
+    results[3] = a;
+
+    assertArrayEquals(expected, results);
+  }
 }
