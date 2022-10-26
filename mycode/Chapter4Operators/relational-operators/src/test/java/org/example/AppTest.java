@@ -65,4 +65,15 @@ public class AppTest {
     sc.xAndYAndZ(x, y, z);
     assertEquals("z <= x", sc.getLastOperation());
   }
+
+  @Test
+  @DisplayName("convert numbers to strings")
+  public void testConvertNumbersToStrings() {
+    String x = "" + 3;
+    String y = "sum is: " + (1 + 2 + 3);
+    String[] expected = {"3", "sum is: 6"};
+    String[] results = {x, y};
+
+    assertArrayEquals(expected, results);
+  }
 }
