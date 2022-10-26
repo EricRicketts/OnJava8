@@ -1,11 +1,11 @@
 package org.example;
 
-import model.ValA;
-import model.ValB;
+import model.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
 
@@ -42,5 +42,27 @@ public class AppTest {
     boolean[] results = {a0.equals(a1), b0.equals(b1)};
 
     assertArrayEquals(expected, results);
+  }
+
+  @Test
+  @DisplayName("boolean operators")
+  public void testBooleanOperators() {
+    int x = 58;
+    int y = 55;
+    boolean[] results = {x > y, y < x, x >= y, y <= x, !(x == y), y != x};
+    boolean[] expected = {true, true, true, true, true, true};
+
+    assertArrayEquals(expected, results);
+  }
+
+  @Test
+  @DisplayName("short circuiting logical expressions")
+  public void testShortCircuitLogicalExpressions() {
+    int x = 58;
+    int y = 56;
+    int z = 59;
+    ShortCircuit sc = new ShortCircuit();
+    sc.xAndYAndZ(x, y, z);
+    assertEquals("z <= x", sc.getLastOperation());
   }
 }
