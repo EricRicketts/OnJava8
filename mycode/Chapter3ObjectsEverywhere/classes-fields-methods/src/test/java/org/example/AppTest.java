@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
 
   DataOnly dOnly;
+
   @BeforeEach
   public void init() {
   dOnly = new DataOnly();
@@ -47,5 +48,17 @@ public class AppTest {
     results[1] = DataOnly.getStaticI();
 
     assertArrayEquals(expected, results);
+  }
+
+  @Test
+  @DisplayName("static methods used to update a field")
+  public void testStaticMethodsAndInstances() {
+    DataOnly.setStaticI(10);
+    assertEquals(10, DataOnly.getStaticI());
+    /*
+      I was originally confused by the books example.  I now understand.  The book declared => static i = 47;
+      there was no private accessor, so it was package private meaning it could be used in the same package.
+      The getStaticI() method is private meaning it can only be accessed in the DataOnly class.
+     */
   }
 }
