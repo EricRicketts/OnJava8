@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 public class PointTest {
 
     private Point p1, p2;
+    Double[] expected, results;
 
     @BeforeEach
     public void setUp() {
@@ -17,9 +18,24 @@ public class PointTest {
 
     @Test
     public void testGetXAndGetY() {
-        Double[] expected = new Double[]{5.50, 10.50};
-        Double[] results = new Double[]{p1.getX(), p1.getY()};
+        expected = new Double[]{5.50, 10.50};
+        results = new Double[]{p1.getX(), p1.getY()};
 
         Assertions.assertArrayEquals(expected, results);
+    }
+
+    @Test
+    public void testSetXAndSetY() {
+        p2.setX(6.60);
+        p2.setY(16.60);
+        expected = new Double[]{6.60, 16.60};
+        results = new Double[]{p2.getX(), p2.getY()};
+
+        Assertions.assertArrayEquals(expected, results);
+    }
+
+    @Test
+    public void testEquals() {
+        
     }
 }
