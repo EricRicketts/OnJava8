@@ -36,6 +36,9 @@ public class PointTest {
 
     @Test
     public void testEquals() {
-        
+        p2.setX(5.50);
+        p2.setY(10.50);
+
+        Assertions.assertTrue(p1.equals(p2));
     }
 }

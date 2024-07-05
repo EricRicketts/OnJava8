@@ -20,6 +20,22 @@ public class Point {
         this.y = y;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Point point)) return false;
+
+        if (!getX().equals(point.getX())) return false;
+        return getY().equals(point.getY());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getX().hashCode();
+        result = 31 * result + getY().hashCode();
+        return result;
+    }
+
     public Point(Double x, Double y) {
         this.x = x;
         this.y = y;
