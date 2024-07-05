@@ -44,12 +44,11 @@ public class DataOnly {
     this.b = b;
   }
 
-  public int addToI(int adder) {
-    this.i += adder;
-    return this.i;
+  public void addToI(int adder) {
+    this.setI(this.getI() + adder);
   }
 
   public void addToD(double adder) {
-    this.d += adder;
+    this.setD(this.getD() + adder);
   }
 }

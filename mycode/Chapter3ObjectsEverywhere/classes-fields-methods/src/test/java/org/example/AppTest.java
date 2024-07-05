@@ -27,14 +27,15 @@ public class AppTest {
   @Test
   @DisplayName("method return type is int")
   public void testMethodReturnTypeIsInt() {
-  assertEquals(15, dOnly.addToI(5));
+    dOnly.addToI(5);
+    assertEquals(15, dOnly.getI());
   }
 
   @Test
   @DisplayName("void return type adds to double field")
   public void testVoidMethodAddsToDoubleField() {
-    dOnly.addToD(5.00);
-    assertEquals(15.00, dOnly.getD());
+    dOnly.addToD(5.55);
+    assertEquals(15.5500, dOnly.getD());
   }
 
   @Test
