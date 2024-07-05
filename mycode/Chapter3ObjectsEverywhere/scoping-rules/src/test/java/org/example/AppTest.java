@@ -31,6 +31,8 @@ public class AppTest {
         assertEquals(12, x);
       }
         assertEquals(12, x); // retains value in outer scope after reassignment
+        x = 10; // can reassign in outer scope
+        assertEquals(10, x); // retains value in outer scope after reassignment
     }
   }
 }
